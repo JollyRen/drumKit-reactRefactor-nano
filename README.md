@@ -3,13 +3,14 @@
 - [The Premise](https://github.com/JollyRen/drumKit-reactRefactor-nano#the-premise)
 - [The Project](https://github.com/JollyRen/drumKit-reactRefactor-nano#the-project)
     - [onKeyDown Blues](https://github.com/JollyRen/drumKit-reactRefactor-nano#onkeydown-blues)
+        - [Why "onKeyDown"?]()
     - ["Play It Sam"](https://github.com/JollyRen/drumKit-reactRefactor-nano#play-it-sam)
     - [Initiating Players and Audio](https://github.com/JollyRen/drumKit-reactRefactor-nano#initiating-players-and-audio)
 - [Outro](https://github.com/JollyRen/drumKit-reactRefactor-nano#outro)
 
 ## The Premise
 
-first off, I want to point out that this project is from the 30 Javascript apps in 30 days challenge / course from Wes Bos which you can [find here](https://javascript30.com/).
+First off, I want to point out that this project is from the 30 Javascript apps in 30 days challenge / course from Wes Bos which you can [find here](https://javascript30.com/).
 
 While Wes Bos' original project is a very straightforward and concise app, I'm on a journey to go through the course using nano-react-app or create-react-app to convert these usually small projects into a framework.
 
@@ -39,6 +40,12 @@ From the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_att
 This `tabIndex={-1}` solution ended up being my hacky way to get this otherwise input-field-focused event to occur.
 
 Now that the major issue is out of the way, we can move onto the more visible but much simpler issues of changing class names dynamically to initiate animation and getting audio to play.
+
+#### Why "onKeyDown"?
+
+`onKeyDown` capture gets the key press at the moment you press down. `onKeyPress` only registers the full down and up, similar to `onClick` compared to `onMouseDown` and `onMouseUp`. Lastly `onKeyUp` only fires the moment the key comes up, so you could be holding it for as long as you want. Basically, it's a drum kit. Think about it logically for a moment.
+
+When you hit a drum, does it make a sound when you hold the drumstick to the surface, or when you lift it off? No, it's on impact, of course. We want to simulate that in our code, and `onKeyDown` makes the most sense.
 
 ### "Play It Sam"
 

@@ -3,7 +3,7 @@
 - [The Premise](https://github.com/JollyRen/drumKit-reactRefactor-nano#the-premise)
 - [The Project](https://github.com/JollyRen/drumKit-reactRefactor-nano#the-project)
     - [onKeyDown Blues](https://github.com/JollyRen/drumKit-reactRefactor-nano#onkeydown-blues)
-        - [Why "onKeyDown"?]()
+        - [Why "onKeyDown"?](https://github.com/JollyRen/drumKit-reactRefactor-nano/blob/main/README.md#why-onkeydown)
     - ["Play It Sam"](https://github.com/JollyRen/drumKit-reactRefactor-nano#play-it-sam)
     - [Initiating Players and Audio](https://github.com/JollyRen/drumKit-reactRefactor-nano#initiating-players-and-audio)
 - [Outro](https://github.com/JollyRen/drumKit-reactRefactor-nano#outro)

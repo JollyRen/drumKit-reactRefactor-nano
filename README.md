@@ -2,6 +2,10 @@
 
 - [The Premise](/drumKit-reactRefactor-nano#the-premise)
 - [The Project](/drumKit-reactRefactor-nano#the-project)
+    - [onKeyDown Blues](/drumKit-reactRefactor-nano#onkeydown-blues)
+    - ["Play It Sam"](/drumKit-reactRefactor-nano#play-it-sam)
+    - [Initiating Players and Audio](/drumKit-reactRefactor-nano#initiating-players-and-audio)
+- [Outro](/drumKit-reactRefactor-nano#outro)
 
 ## The Premise
 

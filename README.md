@@ -48,24 +48,26 @@ In this case, we're using `transitionend` events to listen for when our CSS tran
 
 ```jsx
 
-const { keyPress, keyEl } = props.props //props passed down from main div on App entrypoint, to parent, to "Key" child component
+const { keyPress, keyEl } = props.props //props passed down from main div on App entrypoint
+                                        //to parent, to "Key" child component
 
-const [isPlaying, setIsPlaying] = useState('key') //isPlaying toggle, dynamic class name
-const handleTransition = () => setIsPlaying('key') //handle's changing isPlaying back to original class name once transitionEnd fires.
+const [isPlaying, setIsPlaying] = useState('key')  //isPlaying toggle, dynamic class name
+const handleTransition = () => setIsPlaying('key') //handles changing isPlaying back to
+                                                   //original class name once transitionEnd fires.
 
 useEffect(
-    () =>
-      keyPress == code                  //keypress value matches keycode of event(num vs string)
-        ? (
-            audio.currentTime = 0,      //reset audio on corresponding keycode
-                                        //otherwise it will play until the end without firing again
-            audio.play(),               //play audio
-            setIsPlaying('key playing') //set isPlaying to 'key playing' to trigger transition
-          )
-        : null,
-    [keyPress]                          //listen for keypress changes
-                                        //(keypress fires keycode, then immediately is reset to '')
-  )
+  () =>
+    keyPress == code                //keypress value matches keycode of event(num vs string)
+      ? (
+        audio.currentTime = 0,      //reset audio on corresponding keycode
+                                    //otherwise it will play until the end without firing again
+        audio.play(),               //play audio
+        setIsPlaying('key playing') //set isPlaying to 'key playing' to trigger transition
+        )
+      : null,
+[keyPress]                          //listen for keypress changes
+                                    //(keypress fires keycode, then immediately is reset to '')
+)
 
 <div data-key={code} className={isPlaying} onTransitionEnd={handleTransition}></div>
 
